@@ -18,6 +18,7 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$text_ex = explode('!', $text);
+			
 			if($text_ex[0] == "cal" || $text_ex[0] == "Cal" )
 			{
 				$x = $text_ex[1];
@@ -28,9 +29,11 @@ if (!is_null($events['events'])) {
 				'text' => $res
 				];
 			}
-			if($text_ex[0] == "gacha" || $text_ex[0] == "Gacha"){
+			
+			elseif($text_ex[0] == "gacha" || $text_ex[0] == "Gacha")
+			{
 
-$gacha_list = array(
+	$gacha_list = array(
     	'1' => array( 'name' => 'Artoria Pendragon [SSR]', 'rate' => 1 )
    	,'2' => array( 'name' => 'Artoria Pendragon (Alter) [SR]', 'rate' => 3 )
    	,'3' => array( 'name' => 'Nero Claudius [SR]', 'rate' => 3 )
