@@ -18,18 +18,19 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$text_ex = explode('!', $text);
-			if($text_ex[0]== "cal"){
+			if($text_ex[0]== "cal")
+			{
 				$res = $text_ex[1];
-			$messages = [
+				$messages = [
 				'type' => 'text',
 				'text' => $res
-			];
+				];
 			}
 			else {
-				$message = [
-					'type' => 'text',
-					'text' => 'Wrong command mofo'
-			];
+				$messages = [
+				'type' => 'text',
+				'text' => 'Wrong command mofo'
+				];
 			}
 
 			// Make a POST Request to Messaging API to reply to sender
