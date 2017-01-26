@@ -29,7 +29,7 @@ if (!is_null($events['events'])) {
 				];
 			}
 			if($text_ex[0] == "gacha" || $text_ex[0] == "Gacha"){
-for($i=0; $i<=1;$i++){
+
 $gacha_list = array(
     	'1' => array( 'name' => 'Artoria Pendragon [SSR]', 'rate' => 1 )
    	,'2' => array( 'name' => 'Artoria Pendragon (Alter) [SR]', 'rate' => 3 )
@@ -68,7 +68,7 @@ foreach ( $list as $id => $v ) {
 }
 	$res= sprintf( 'Get ID: %s - Name: %s', $hit_id, $gacha_list[$hit_id]['name'] );
 
-}
+
 
 				$messages = [
 				'type' => 'text',
