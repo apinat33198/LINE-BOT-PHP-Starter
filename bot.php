@@ -27,9 +27,10 @@ if (!is_null($events['events'])) {
 				];
 			}
 			else {
+				$res = 'Wrong Command';
 				$messages = [
 				'type' => 'text',
-				'text' => 'Wrong command mofo'
+				'text' => $res
 				];
 			}
 
