@@ -30,16 +30,12 @@ if (!is_null($events['events'])) {
 			}
 			if($text_ex[0] == "wiki" || $text_ex[0] == "Wiki"){
 				
-				$ch1 = curl_init(); 
-				curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false); 
-				curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true); 
-				curl_setopt($ch1, CURLOPT_URL, 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='.$text_ex[1]); 
-				curl_close($ch1);
-				$result1 = curl_exec($ch1);
-				$obj = json_decode($result1, true); 
+				$w = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='.$text_ex[1]);
+				$obj = json_decode($w, true); 
 				foreach($obj['query']['pages'] as $key => $val){ 
 					
 					$res = $val['extract']; 
+				
 				}
 				
 				$messages = [
