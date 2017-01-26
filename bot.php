@@ -29,26 +29,26 @@ if (!is_null($events['events'])) {
 				];
 			}
 			if($text_ex[0] == "gacha" || $text_ex[0] == "Gacha"){
-for($i=0; $i<=10;$i++){
+for($i=0; $i<=1;$i++){
 $gacha_list = array(
-    	'1' => array( 'name' => 'Artoria Pendragon', 'rate' => 1 )
-   	,'2' => array( 'name' => 'Artoria Pendragon (Alter)', 'rate' => 3 )
-   	,'3' => array( 'name' => 'Nero Claudius', 'rate' => 3 )
-   	,'4' => array( 'name' => 'Siegfried', 'rate' => 3 )
-	,'5' => array( 'name' => 'Julius Caesar', 'rate' => 40 )
-	,'6' => array( 'name' => 'Attila', 'rate' => 1 )
-	,'7' => array( 'name' => 'Gilles de Rais (Saber)', 'rate' => 40 )
-	,'8' => array( 'name' => 'Le Chevalier dEon', 'rate' => 3 )
-	,'9' => array( 'name' => 'Okita Souji', 'rate' => 0.1 )
-	,'10' => array( 'name' => 'Fergus Mac Roich', 'rate' => 40 )
-	,'11' => array( 'name' => 'Mordred', 'rate' => 1 )
-	,'12' => array( 'name' => 'Nero Claudius (Bride)', 'rate' => 0.1 )
-	,'13' => array( 'name' => 'Ryougi Shiki (Saber)', 'rate' => 0.1 )
-	,'14' => array( 'name' => 'Rama', 'rate' => 3 )
-	,'15' => array( 'name' => 'Lancelot (Saber)', 'rate' => 3 )
-	,'16' => array( 'name' => 'Gawain', 'rate' => 3 )
-	,'17' => array( 'name' => 'Bedivere', 'rate' => 40 )
-	,'18' => array( 'name' => 'Miyamoto Musashi', 'rate' => 0.1 )
+    	'1' => array( 'name' => 'Artoria Pendragon [SSR]', 'rate' => 1 )
+   	,'2' => array( 'name' => 'Artoria Pendragon (Alter) [SR]', 'rate' => 3 )
+   	,'3' => array( 'name' => 'Nero Claudius [SR]', 'rate' => 3 )
+   	,'4' => array( 'name' => 'Siegfried [SR]', 'rate' => 3 )
+	,'5' => array( 'name' => 'Julius Caesar [R]', 'rate' => 40 )
+	,'6' => array( 'name' => 'Attila [SSR]', 'rate' => 1 )
+	,'7' => array( 'name' => 'Gilles de Rais (Saber) [R]', 'rate' => 40 )
+	,'8' => array( 'name' => 'Le Chevalier dEon [SR]', 'rate' => 3 )
+	,'9' => array( 'name' => 'Okita Souji [SSR Limited]', 'rate' => 0.1 )
+	,'10' => array( 'name' => 'Fergus Mac Roich [R]', 'rate' => 40 )
+	,'11' => array( 'name' => 'Mordred [SSR]', 'rate' => 1 )
+	,'12' => array( 'name' => 'Nero Claudius (Bride) [SSR Limited]', 'rate' => 0.1 )
+	,'13' => array( 'name' => 'Ryougi Shiki (Saber) [SSR Limited]', 'rate' => 0.1 )
+	,'14' => array( 'name' => 'Rama [SR]', 'rate' => 3 )
+	,'15' => array( 'name' => 'Lancelot (Saber) [SR]', 'rate' => 3 )
+	,'16' => array( 'name' => 'Gawain [SR]', 'rate' => 3 )
+	,'17' => array( 'name' => 'Bedivere [R]', 'rate' => 40 )
+	,'18' => array( 'name' => 'Miyamoto Musashi [SSR Limited]', 'rate' => 0.1 )
 	
 	
 );
