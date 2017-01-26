@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$text_ex = explode('!', $text);
-			if($text_ex[0]== "cal")
+			if($text_ex[0]== "cal" || $text_ex[0]== "Cal" )
 			{
 				$x = $text_ex[1];
 				$res = eval('return '.$x.';');
