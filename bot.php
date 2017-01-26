@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 				'text' => $res
 				];
 			}
-			else if($text_ex[0] == "wiki" || $text_ex[0] == "Wiki"){
+			if($text_ex[0] == "wiki" || $text_ex[0] == "Wiki"){
 				
 				$ch1 = curl_init(); 
 				curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false); 
