@@ -28,16 +28,48 @@ if (!is_null($events['events'])) {
 				'text' => $res
 				];
 			}
-			if($text_ex[0] == "wiki" || $text_ex[0] == "Wiki"){
-				
-				$w = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='.$text_ex[1]);
-				$obj = json_decode($w, true); 
-				foreach($obj['query']['pages'] as $key => $val){ 
-					
-					$res = $val['extract']; 
-				
-				}
-				
+			if($text_ex[0] == "gacha" || $text_ex[0] == "Gacha"){
+for($i=0; $i<=10;$i++){
+$gacha_list = array(
+    	'1' => array( 'name' => 'Artoria Pendragon', 'rate' => 1 )
+   	,'2' => array( 'name' => 'Artoria Pendragon (Alter)', 'rate' => 3 )
+   	,'3' => array( 'name' => 'Nero Claudius', 'rate' => 3 )
+   	,'4' => array( 'name' => 'Siegfried', 'rate' => 3 )
+	,'5' => array( 'name' => 'Julius Caesar', 'rate' => 40 )
+	,'6' => array( 'name' => 'Attila', 'rate' => 1 )
+	,'7' => array( 'name' => 'Gilles de Rais (Saber)', 'rate' => 40 )
+	,'8' => array( 'name' => 'Le Chevalier dEon', 'rate' => 3 )
+	,'9' => array( 'name' => 'Okita Souji', 'rate' => 0.1 )
+	,'10' => array( 'name' => 'Fergus Mac Roich', 'rate' => 40 )
+	,'11' => array( 'name' => 'Mordred', 'rate' => 1 )
+	,'12' => array( 'name' => 'Nero Claudius (Bride)', 'rate' => 0.1 )
+	,'13' => array( 'name' => 'Ryougi Shiki (Saber)', 'rate' => 0.1 )
+	,'14' => array( 'name' => 'Rama', 'rate' => 3 )
+	,'15' => array( 'name' => 'Lancelot (Saber)', 'rate' => 3 )
+	,'16' => array( 'name' => 'Gawain', 'rate' => 3 )
+	,'17' => array( 'name' => 'Bedivere', 'rate' => 40 )
+	,'18' => array( 'name' => 'Miyamoto Musashi', 'rate' => 0.1 )
+	
+	
+);
+$total_rate = 0;
+foreach ( $gacha_list as $id => $v ) {
+    if ( is_int($v['rate']) && $v['rate'] > 0 ) {
+        $total_rate += $v['rate'];
+        $list[$id]['range_end'] = $total_rate;
+    }
+}
+$index = mt_rand( 1, $total_rate );
+foreach ( $list as $id => $v ) {
+    if ( $index <= $v['range_end'] ) {
+        $hit_id    = $id;
+        break;
+    }
+}
+	$res= sprintf( 'Get ID: %s - Name: %s', $hit_id, $gacha_list[$hit_id]['name'] );
+
+}
+
 				$messages = [
 				'type' => 'text',
 				'text' => $res
